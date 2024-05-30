@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "692135371948",
+    "project_id": "shopping-list-app-c5e24",
+    "storage_bucket": "shopping-list-app-c5e24.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:692135371948:android:78e5b328fbea2569e9eb09",
+        "android_client_info": {
+          "package_name": "com.example.check_box"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLt3ziB9gTE8U9pRyg9QZHRW6LcwTUJrE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

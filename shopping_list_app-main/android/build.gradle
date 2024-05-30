@@ -1,0 +1,32 @@
+buildscript {
+    ext.kotlin_version='1.8.22'// Kotlin sürümünü buradan belirtin
+    repositories {
+        google() // Google Maven deposunu ekleyin
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.2.2' // Android Gradle Plugin sürümünü güncelleyin
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version" // Kotlin Gradle eklentisini ekleyin
+        classpath 'com.google.gms:google-services:4.3.14' // Google Services eklentisinin bağımlılığını ekleyin
+
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.buildDir = '../build'
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(':app')
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
